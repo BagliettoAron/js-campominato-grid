@@ -29,6 +29,11 @@ for (let i = 0; i < randomNumbersArray.length; i++) {
     newCreatedElement.innerHTML = `<span> ${thisNumber} </span>`
     console.log(newCreatedElement);
 
+    // faccio in modo che il nuovo elemento creato sia triggerabile al click e uso this per triggerare solo l'elemento cliccato
+    newCreatedElement.addEventListener("click", function() {
+        this.classList.add("active");
+    });
+
     // appendo l'elemento alla griglia che ho prelevato subito prima del ciclo for
     mainGrid.append(newCreatedElement);
     console.log(mainGrid);
