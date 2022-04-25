@@ -8,9 +8,7 @@ const randomNumbersArray = generateIncrementalIntegerNumbers (maxLength)
 
 console.log(randomNumbersArray);
 
-
 // 2. inserisco i numeri ricavati ognuno all'interno di una casella (.inner-square)
-
 // prelevo la classe della griglia
 const mainGrid = document.querySelector (".game-main-grid")
 console.log(mainGrid);
@@ -38,10 +36,6 @@ for (let i = 0; i < randomNumbersArray.length; i++) {
     mainGrid.append(newCreatedElement);
     console.log(mainGrid);
 }
-
-
-
-
 
 // FUNCTIONS :
 
