@@ -8,7 +8,33 @@ const randomNumbersArray = generateIncrementalIntegerNumbers (maxLength)
 
 console.log(randomNumbersArray);
 
-2. 
+
+// 2. inserisco i numeri ricavati ognuno all'interno di una casella (.inner-square)
+
+// prelevo la classe della griglia
+const mainGrid = document.querySelector (".game-main-grid")
+console.log(mainGrid);
+
+// scansiono con un ciclo for tutti gli elementi dell'array in modo da assegnare a ognuno gli elementi che andranno a formare .inner-square
+for (let i = 0; i < randomNumbersArray.length; i++) {
+    const thisNumber = randomNumbersArray [i];
+
+    // creo un div
+    const newCreatedElement = document.createElement("div")
+
+    // assegno al div appena creato la classe .inner-square
+    newCreatedElement.classList.add("inner-square") 
+
+    // aggiungo lo span con il numero
+    newCreatedElement.innerHTML = `<span> ${thisNumber} </span>`
+    console.log(newCreatedElement);
+
+    // appendo l'elemento alla griglia che ho prelevato subito prima del ciclo for
+    mainGrid.append(newCreatedElement);
+    console.log(mainGrid);
+}
+
+
 
 
 
